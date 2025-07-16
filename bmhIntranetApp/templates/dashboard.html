@@ -10,7 +10,7 @@
             <div class="col-12 col-md-3">
                 <!----------------- QUICK LINKS card ------------------------------------>
                 <div class="card">
-                    <div class="card-header text-center text-white" style="background-color: #0070ff;">Quick Links</div>
+                    <div class="card-header text-center text-white" style="background-color: #26208E;">Quick Links</div>
                     <div class="card-body">
                         <div class="row">
                             {% for i in numg %}
@@ -29,7 +29,7 @@
                 <!----------------- /QUCK LINKS card ----------------------------------------->
                 <!----------------- ICT SERVICES card ------------------------------------>
                 <div class="card">
-                    <div class="card-header text-center text-white" style="background-color: #0070ff;">ICT Services</div>
+                    <div class="card-header text-center text-white" style="background-color: #26208E;">ICT Services</div>
                     <div class="card-body">
                         <ul class="list-group list-group-light">
                             <li class="list-group-item px-3">ICT  Help Desk</li>
@@ -45,20 +45,41 @@
             <!----------------- EXECUTIVE DIRECTOR col ---------------------------------------->
             <div class="col-12 col-md-2">
                 <!----------------- EXECUTIVE card ------------------------------------>
-                <div class="card" >
-                    <div class="card-header text-center text-white" style="background-color: #0070ff;">Executive Director</div>
+                <!-- <div class="card" >
+                    <div class="card-header text-center text-white" style="background-color: #26208E;">Executive Director</div>
                 <div class="bg-image text-center">
                     <img src="{% static 'images/makubi.jpeg' %}" class="rounded" width="150"/>
                 </div>
                 <div class="card-body text-center">
                     <p>Prof. Abel Makubi</p>
                 </div>
-                </div>
+                </div> -->
+<div class="card">
+    <div class="card-header text-center text-white" style="background-color: #26208E;">
+        Executive Director
+    </div>
+
+    <!-- Added padding between heading and image -->
+    <div class="bg-image text-center pt-3">
+        <!-- Image inside a frame, larger size -->
+        <img src="{% static 'images/makubi.jpeg' %}" 
+             class="rounded border border-primary p-1" 
+             width="150" height="150" />
+    </div>
+
+    <div class="card-body text-center">
+        <!-- Name with light blue background -->
+        <p style="background-color:  #ADD8E6; display: inline-block; padding: 5px 10px; border-radius: 5px;">
+            Prof. Abel Makubi
+        </p>
+    </div>
+</div>
+
                 <!----------------- /EXECUTIVE card ----------------------------------------->
                 <!----------------- EMPLOYEE DIRECTORY card ------------------------------------>
                 <div class="cadcont py-4">
                     <div class="card">
-                        <div class="card-header text-center text-white" style="background-color: #0070ff;">Employee Directory</div>
+                        <div class="card-header text-center text-white" style="background-color: #26208E;">Employee Directory</div>
                         <div class="card-body">
                             <ul class="list-group list-group-light">
                                 <li class="list-group-item px-3">DAHRMS</li>
@@ -94,7 +115,7 @@
                             <!----------------- DOCUMENT REPOSOTORY card ------------------------------------>
                             <div class="cadcont py-4">
                                 <div class="card">
-                                    <div class="card-header text-center text-white" style="background-color: #0070ff;">Document Repository</div>
+                                    <div class="card-header text-center text-white" style="background-color: #26208E;">Document Repository</div>
                                     <div class="card-body">
                                         <ul class="list-group list-group-light">
                                             <li class="list-group-item px-3">DAHRMS</li>
@@ -115,7 +136,7 @@
                             <!----------------- DOCUMENT REPOSOTORY card ------------------------------------>
                             <div class="cadcont py-4">
                                 <div class="card">
-                                    <div class="card-header text-center text-white" style="background-color: #0070ff;">Announcements</div>
+                                    <div class="card-header text-center text-white" style="background-color: #26208E;">Announcements</div>
                                     <div class="card-body">
                                         <ul class="list-group list-group-light">
                                             <li class="list-group-item px-3">DAHRMS</li>
@@ -140,7 +161,7 @@
             <div class="col-12 col-md-3">
                 <!----------------- / card ------------------------------------>
                 <div class="card" >
-                    <div class="card-header text-center text-white" style="background-color: #0070ff;">Hot Upcoming Events</div>
+                    <div class="card-header text-center text-white" style="background-color: #26208E;">BMH Calender</div>
                     <div class="card-body">
                         <!---EVENTS-->
                         <div class="table-responsive">
@@ -149,7 +170,7 @@
                                 </thead>
                                                                 
                                     <tbody>
-                                        {% for i in numg %}
+                                        <!-- {% for i in numg %}
                                             <tr>
                                                 <td><img
                                                     src="{% static 'images/new.gif'%}"
@@ -161,28 +182,29 @@
                                                     <p>Waziri Kufungua Royal and International Clinic</p>
                                                 </td>
                                             </tr>
-                                        {% endfor %}
+                                        {% endfor %} -->
                                     </tbody>                        
                             </table>	
                         </div>
                         <!---/EVENTS-->
                     </div>
-                    <div class="card-footer text-center"><a href="#">View More</a> <i class="fa fa-chevron-right" style="color: #0070ff;"></i></div>
+                    <!-- <div class="card-footer text-center"><a href="#">View More</a> <i class="fa fa-chevron-right" style="color: #26208E;"></i></div> -->
                 </div>
                 <!----------------- END OF UPCOMING EVENTS /card ----------------------------------------->
                 <!----------------- BMH VISION AND MISSION card ------------------------------------>
                 <div class="cadcont py-4">
                     <div class="card">
-                        <div class="card-header text-center" style="background-color: #F8F9FA; color: #000000;">BMH VISION AND MISSION</div>
+                        <div class="card-header text-center text-white" style="background-color: #26208E; color: #000000;">BMH VISION AND MISSION</div>
                         <div class="card-body">
-                            <ul class="list-group list-group-light">
-                                <li class="list-group-item px-3">DAHRMS</li>
-                                <li class="list-group-item px-3">ICT</li>
-                                <li class="list-group-item px-3">DNS</li>
-                                <li class="list-group-item px-3">DCS</li>
-                                <li class="list-group-item px-3">DSS</li>
-                                <li class="list-group-item px-3">PMU</li>
-                            </ul>
+                            <div class="h3">Vision</div>
+                          <div class="p">
+                            To be a high-tech Hospital based on new sciences for a healthy society and sustainable national development. 
+                          </div>
+
+                          <div class="h3">Mission</div>
+                          <div class="p">
+                         To provide specialized and super specialized promotive, preventive, curative, rehabilitative services, research, innovative and training using new technologies. 
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -190,7 +212,7 @@
                  <!----------------- BMH CORE VALUES card ------------------------------------>
                 <div class="cadcont py-1">
                     <div class="card">
-                        <div class="card-header text-center" style="background-color: #F8F9FA; color: #000000;">BMH CORE VALUES</div>
+                        <div class="card-header text-center text-white" style="background-color: #26208E; color: #000000;">BMH CORE VALUES</div>
                         <div class="card-body">
                             <ul class="list-group list-group-light">
                                 <li class="list-group-item px-3">DAHRMS</li>
