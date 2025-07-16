@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +40,31 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bmhIntranetApp',
 ]
+
+JAZZMIN_SETTINGS = {
+    # Title of the window (top bar in browser)
+    "site_title": "BMH Intranet Admin",
+
+    # Title on the login screen and main page
+    "site_header": "BMH Intranet",
+
+    # Brand/logo text
+    "site_brand": "BMH",
+
+    # Optional favicon
+    "site_icon": None,
+
+    # The welcome message on the login screen
+    "welcome_sign": "Welcome to the BMH Intranet Admin Panel",
+    # Custom CSS file to replace the version footer
+    "custom_css": "admin/css/custom.css",
+    #"site_logo": "admin/images/logos/bmhlogo.png",
+    "site_logo_classes": "img-circle",
+
+    # Footer text (this only changes the copyright)
+    "copyright": "© 2025 BMH",
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -116,6 +142,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

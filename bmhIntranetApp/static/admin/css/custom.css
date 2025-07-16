@@ -1,0 +1,15 @@
+/* Hide default Jazzmin version text */
+footer .float-right.d-none.d-sm-inline {
+    display: none !important;
+}
+
+/* Add custom version text at bottom right */
+footer.main-footer::after {
+    content: "BMH Intranet version 1.0";
+    float: right;
+    color: #6c757d;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    padding-right: 1rem;
+    /* Removed display: inline-block */
+}
