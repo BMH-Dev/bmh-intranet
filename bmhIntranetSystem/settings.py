@@ -58,8 +58,8 @@ JAZZMIN_SETTINGS = {
     "welcome_sign": "Welcome to the BMH Intranet Admin Panel",
     # Custom CSS file to replace the version footer
     "custom_css": "admin/css/custom.css",
-    #"site_logo": "admin/images/logos/bmhlogo.png",
-    "site_logo_classes": "img-circle",
+    "site_logo": "admin/images/logos/bmhlogo.png",
+    "site_logo_classes": "img-fluid elevevation-2",
 
     # Footer text (this only changes the copyright)
     "copyright": "© 2025 BMH",

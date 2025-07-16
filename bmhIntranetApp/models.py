@@ -8,6 +8,9 @@ class QuickLinkTypes(models.Model):
     type_name = models.CharField(max_length=250)
     class Meta:
         verbose_name_plural = "Quick Link Types"
+        
+    def __str__(self):
+        return self.type_name
     
     
 class QuickLinks(models.Model):
@@ -17,12 +20,17 @@ class QuickLinks(models.Model):
     link_logo = models.ImageField()
     class Meta:
         verbose_name_plural = "Quick Links"
+        
+    def __str__(self):
+        return self.link_name
     
     
 class DocumentTypes(models.Model):
     type_name = models.CharField(max_length=250)
     class Meta:
         verbose_name_plural = "Document Types"
+    def __str__(self):
+        return self.type_name
     
     
 class DocumentsRepository(models.Model):
@@ -33,11 +41,15 @@ class DocumentsRepository(models.Model):
     class Meta:
         verbose_name = "Documents Repository"
     
+    def __str__(self):
+        return self.document_name
     
 class NewsTypes(models.Model):
     type_name = models.CharField(max_length=250)
     class Meta:
         verbose_name_plural = "News Types"
+    def __str__(self):
+        return self.type_name
     
 
 class News(models.Model):
@@ -49,6 +61,9 @@ class News(models.Model):
     class Meta:
         verbose_name_plural = "News"
     
+    def __str__(self):
+        return self.title
+    
     
 class TrainingResources(models.Model):
     title = models.CharField(max_length=250)
@@ -56,6 +71,9 @@ class TrainingResources(models.Model):
     
     class Meta:
         verbose_name_plural = "Training Resources"
+    
+    def __str__(self):
+        return self.title
         
     
 class BmhCalendars(models.Model):
@@ -69,12 +87,17 @@ class BmhCalendars(models.Model):
     class Meta:
         verbose_name_plural = "BMH Calendars"
     
+    def __str__(self):
+        return f'{ self.event_name}'
+    
 
 class Announcements(models.Model):
     description = models.TextField()
     photo = models.FileField()
     class Meta:
         verbose_name_plural = "Announcements"
+    def __str__(self):
+        return self.description[:50]
     
     
 class BmhVMCs(models.Model):
@@ -83,11 +106,15 @@ class BmhVMCs(models.Model):
     core_values = models.TextField()
     class Meta:
         verbose_name_plural = "BMH Vision, Mission, & Core Values"
+    def __str__(self):
+        return "BMH Vision, Mission, & Core Values"
     
 class Departments(models.Model):
     department_name = models.CharField(max_length=250)
     class Meta:
         verbose_name_plural = "Departments"
+    def __str__(self):
+        return self.department_name
     
     
 class Designations(models.Model):
@@ -95,6 +122,10 @@ class Designations(models.Model):
     department_id = models.ForeignKey(Departments, on_delete=models.CASCADE)
     class Meta:
         verbose_name = "Designation"
+    
+    def __str__(self):
+        return self.title
+        
  
 
 class CustomUser(AbstractUser):
@@ -103,6 +134,9 @@ class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
     class Meta:
         verbose_name = "Custom User"
+    
+    def __str__(self):
+        return self.username
         
 
 
@@ -114,6 +148,8 @@ class AdminHOD(models.Model):
     class Meta:
         verbose_name = "Admin HOD"
         verbose_name_plural = "Admin HODs"
+    def __str__(self):
+        return self.admin.username
     
 class Staffs(models.Model):
     admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
@@ -123,6 +159,8 @@ class Staffs(models.Model):
     class Meta:
         verbose_name = "Staffs"
         verbose_name_plural = "Staffs"
+    def __str__(self):
+        return self.admin.username
     
 
 @receiver(post_save, sender=CustomUser)

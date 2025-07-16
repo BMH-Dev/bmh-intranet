@@ -13,3 +13,12 @@ footer.main-footer::after {
     padding-right: 1rem;
     /* Removed display: inline-block */
 }
+
+/* Resize and center logo on login page */
+.login-logo img {
+    max-height: 120px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
